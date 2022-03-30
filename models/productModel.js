@@ -1,5 +1,4 @@
-import { mongoose } from "../config/util.js";
-
+import { mongoose } from "../config/utils.js";
 const productSchema = mongoose.Schema(
   {
     user: {
@@ -14,20 +13,12 @@ const productSchema = mongoose.Schema(
     slug: {
       type: String,
     },
-    image: {
-      type: String,
-      required: true,
-    },
     category: {
       type: String,
       required: true,
     },
-    category_slug: {
-      type: String,
-      // required: true,
-    },
-    description: {
-      type: String,
+    category_id: {
+      type: Number,
       required: true,
     },
     price: {
@@ -35,10 +26,9 @@ const productSchema = mongoose.Schema(
       required: true,
       default: 0,
     },
-    countInStock: {
-      type: Number,
+    status: {
+      type: String,
       required: true,
-      default: 0,
     },
   },
   {
