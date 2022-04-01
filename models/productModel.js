@@ -30,6 +30,7 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    date: { type: String },
   },
   {
     timestamps: true,

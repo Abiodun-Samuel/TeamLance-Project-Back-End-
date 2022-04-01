@@ -16,7 +16,7 @@ app.options("*", cors(corsOptions));
 
 // Home Route
 app.get("/", (req, res) => {
-  res.send("Welcome to my TeamLance Project...");
+  res.send("Welcome to TeamLance Project...");
 });
 
 app.use("/api/user", userRoutes);

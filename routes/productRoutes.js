@@ -12,8 +12,12 @@ import { protect } from "../middlewares/userMiddleware.js";
 // Protected Route
 router.get("/", protect, getProducts);
 router.get("/:slug", protect, getProductBySlug);
-router.post("/", protect, createProduct);
+router.post("/create", protect, createProduct);
 router.put("/:slug", protect, updateProduct);
-router.delete("/:slug", protect, deleteProduct);
+
+// delete many resources
+router.post("/delete", protect, deleteProduct);
+// delete a single resource
+// router.delete("/:slug", protect, deleteProduct);
 
 export default router;
