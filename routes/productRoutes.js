@@ -10,7 +10,7 @@ import {
 import { protect } from "../middlewares/userMiddleware.js";
 
 // Protected Route
-router.get("/", protect, getProducts);
+router.get("/", getProducts);
 router.get("/:slug", protect, getProductBySlug);
 router.post("/create", protect, createProduct);
 router.put("/:slug", protect, updateProduct);

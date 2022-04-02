@@ -29,6 +29,8 @@
     "nodemon": "^2.0.15"
   },
   "devDependencies": {
-    "jest": "^27.5.1"
+    "@babel/preset-env": "^7.16.11",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
   }
 }
