@@ -6,9 +6,9 @@ import { randomString, slugify } from "../config/helper.js";
 //@route GET api/products
 //@access private
 const getProducts = asyncHandler(async (req, res) => {
-  res.json({ message: "ok" });
-  // const products = await Product.find().sort({ updatedAt: -1 });
-  // res.json(products);
+  // res.json({ message: "ok" });
+  const products = await Product.find().sort({ updatedAt: -1 });
+  res.json(products);
 });
 
 //@desc fetch a single product

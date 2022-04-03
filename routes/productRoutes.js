@@ -11,12 +11,12 @@ import { protect } from "../middlewares/userMiddleware.js";
 
 // Protected Route
 router.get("/", getProducts);
-router.get("/:slug", protect, getProductBySlug);
-router.post("/create", protect, createProduct);
-router.put("/:slug", protect, updateProduct);
+router.get("/:slug", getProductBySlug);
+router.post("/create", createProduct);
+router.put("/:slug", updateProduct);
 
 // delete many resources
-router.post("/delete", protect, deleteProduct);
+router.post("/delete", deleteProduct);
 // delete a single resource
 // router.delete("/:slug", protect, deleteProduct);
 

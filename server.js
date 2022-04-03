@@ -5,7 +5,7 @@ import { connectDB } from "./config/utils.js";
 import userRoutes from "./routes/userRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 
-// connectDB();
+connectDB();
 const app = express();
 app.use(express.json());
 var corsOptions = {
