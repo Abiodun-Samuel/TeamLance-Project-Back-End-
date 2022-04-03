@@ -9,7 +9,8 @@ connectDB();
 const app = express();
 app.use(express.json());
 var corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "*",
+  // origin: "http://localhost:3000",
 };
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));

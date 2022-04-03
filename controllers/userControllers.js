@@ -6,8 +6,8 @@ import { generateToken } from "../config/utils.js";
 //@route POST /api/users/login
 //@access Public
 const authUser = asyncHandler(async (req, res) => {
-  const { email, password } = req.body;
-  const user = await User.findOne({ email });
+  const { username, password } = req.body;
+  const user = await User.findOne({ username });
   if (user) {
     if (await user.matchPassword(password)) {
       res.send({
@@ -17,7 +17,7 @@ const authUser = asyncHandler(async (req, res) => {
       });
     } else {
       res.status(401);
-      throw new Error("Invalid Email or Password");
+      throw new Error("Invalid Username or Password");
     }
   } else {
     res.status(401);
