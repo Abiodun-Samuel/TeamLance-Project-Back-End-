@@ -43,7 +43,7 @@ const createProduct = asyncHandler(async (req, res) => {
     name: req.body.name,
     slug: `${slugify(req.body.name)}-${randomString(3)}`,
     price: req.body.price,
-    user: req.user._id,
+    user: "62446eb3db731ce4568dc128",
     category: req.body.category,
     category_id: req.body.category_id,
     status: req.body.status,
